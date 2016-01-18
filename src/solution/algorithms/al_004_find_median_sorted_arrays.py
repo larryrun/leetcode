@@ -85,7 +85,11 @@ class Solution(object):
                     return first_median / 1.0
 
 
-if __name__ == '__main__':
-    nums1 = [2]
-    nums2 = [1,3,4]
-    print Solution().findMedianSortedArrays(nums1, nums2)
+import unittest
+
+
+class TestSolution(unittest.TestCase):
+    def test_solution(self):
+        nums1 = [2]
+        nums2 = [1, 3, 4]
+        self.assertEquals(2.5, Solution().findMedianSortedArrays(nums1, nums2))
